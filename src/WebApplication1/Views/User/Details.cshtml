@@ -1,0 +1,16 @@
+﻿@model UserViewModel
+<h1>Details page</h1>
+<asp:input type="text" asp-for="Name" />
+<asp:input type="datetime" asp-for="Birthday" />
+@{
+}
+<asp:custom-checkbox ></asp:custom-checkbox>
+@Html.LabelFor(m => m.Name, null, )
+<ol>
+    @foreach (string friendName in Model.FriendNames)
+    {
+        <li>
+            @friendName
+        </li>
+    }
+</ol>
